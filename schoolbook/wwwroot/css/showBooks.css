@@ -1,0 +1,281 @@
+/* start gloubal rulls */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cairo, sans-serif;
+    font-weight: 300;
+    direction: rtl;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.test {
+    color: red;
+}
+
+/* end gloubal rulls */
+#books-section .books-preview {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#books-section header {
+    height: 50px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 24px -12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#books-section header #filter-button {
+    position: absolute;
+    right: 15px;
+    background-color: #00BCD4;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#books-section header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#books-section header ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    border-radius: 30px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#books-section header ul li a:hover {
+    background-color: #06BBCC;
+    color: white;
+}
+
+#books-section .books-container {
+    flex-grow: 1;
+}
+
+#books-section .books-container .all-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+#books-section .books-container .book-box {
+    border-radius: 20px;
+    background-color: #bef0eeab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#books-section .books-container .book-box:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    box-shadow: 0px 0px 12px -4px black;
+}
+
+#books-section .books-container .book-box img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#books-section .books-container .book-box .book-info {
+    width: 100%;
+}
+
+#books-section .books-container .book-box .book-info h3 {
+    text-align: center;
+}
+
+#books-section .books-container .book-box .book-info .price-rate {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#books-section .books-container .book-box p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+#books-section .books-container .book-box button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px white;
+    background-color: #03A9F4;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#books-section .books-filters {
+    width: 250px;
+    height: fit-content;
+    padding: 10px;
+    box-shadow: -5px 5px 7px -7px #00BCD4;
+    border-radius: 10px;
+    background-color: white;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#books-section .books-filters .search-bar form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#books-section .books-filters .search-bar form label {
+    font-weight: 400;
+}
+
+#books-section .books-filters .search-bar form input[type="search"] {
+    outline: none;
+    border: 1.5px solid #00BCD4;
+    padding: 5px;
+    caret-color: #00BCD4;
+    border-radius: 10px;
+}
+
+#books-section .books-filters form input[type="submit"] {
+    border: none;
+    background-color: #d3f5f4;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#books-section .books-filters form input[type="submit"]:hover {
+    background-color: #03a9f4;
+    color: white;
+}
+
+#books-section .books-filters .filters h2 {
+    background-color: #00BCD4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#books-section .books-filters .filters form .studing-stage,
+#books-section .books-filters .filters form .studing-semester,
+#books-section .books-filters .filters form .price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#books-section .books-filters .filters form .studing-stage h3 {
+    margin-top: 0;
+}
+
+#books-section .books-filters .filters form .studing-stage .filter-box,
+#books-section .books-filters .filters form .studing-semester .filter-box,
+#books-section .books-filters .filters form .price .filter-box {
+    padding: 10px;
+    border: 1px solid #03a9f4;
+    border-radius: 10px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#books-section .books-filters .filters form .studing-stage .filter-box:hover,
+#books-section .books-filters .filters form .studing-semester .filter-box:hover,
+#books-section .books-filters .filters form .price .filter-box:hover {
+    background-color: #00bcd4;
+    color: white;
+    font-weight: 400;
+}
+
+#books-section .books-filters .filters form .studing-semester {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+﻿@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchoolBook | UserProfile</title>
+    <!-- render all elements normale -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="/css/userProfile.css">
+    <!-- goole font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- bg #f7f7ff -->
+    <section id="user-profile">
+        <div class="user-information">
+            <div class="user-description">
+                <div class="image-box">
+                    <img src="~/userimages/@Model.Image" alt="user-image">
+                </div>
+                <h3 id="full-name">@Model.FirstName @Model.LastName</h3>
+                <h3 id="social">وسائل التواصل</h3>
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #74C0FC;"></i> facebook</a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-twitter" style="color: #63E6BE;"></i> twitter</a>
+                    <a href="#" target="_blank"><i class="fa-brands fa-instagram" style="color: #da45f7;"></i> instagram</a>
+                </div>
+            </div>
+            <ul>
+                <li>الاسم كامل : <span>@Model.FirstName @Model.LastName</span></li>
+                <li>البريد الإلكتروني : <span>@Model.Email</span></li>
+                <li>رقم الهاتف : <span>@Model.PhoneNumber</span></li>
+                <li>العنوان : <span>@Model.Governorate / @Model.Central</span></li>
+                <a href="/EditeProfile/EditeProfile/@Model.Id">تعديل البيانات</a>
+            </ul>
+        </div>
+        <h2>اخر خمس عمليات</h2>
+        <table class="recent-books">
+            <thead>
+                <tr>
+                    <td>اسم الكتاب</td>
+                    <td>حالة الكتاب</td>
+                    <td>تاريخ العملية</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Book item in ViewBag.userbook)
+                {
+                <tr>
+                    <td>@item.CompanyName</td>
+                    <td>@item.SerialNumber</td>
+                    <td>@item.PublishYear</td>
+                </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>العدد الكلي للكتب </td>
+                    <td colspan="2" id="total-books">@ViewBag.userbooksize</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* start glubal rouls */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cairo, sans-serif;
+    font-weight: 300;
+    direction: rtl;
+}
+
+img {
+    max-width: 100%;
+} 
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* end glubal rouls */
+#user-profile {
+    background-color: #f7f7ff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+#user-profile .user-information {
+    display: flex;
+    gap: 20px;
+}
+
+#user-profile .user-information .user-description {
+    width: 400px;
+    background-color: white;
+    box-shadow: 0 0 8px 0px lightseagreen;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 26px 0px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#user-profile .user-information  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#user-profile .user-information #name {
+    font-size: 20px;
+}
+
+#user-profile .user-information .social-media {
+    direction: ltr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
+    /* margin-top: 20px; */
+}
+
+#user-profile .user-information #social {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 13px;
+    background-color: #0097ff;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 1px 5px white;
+}
+
+#user-profile .user-information .social-media a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    width: calc(100% / 2);
+    text-align: center;
+}
+
+#user-profile .user-information .social-media i {
+    margin-right: 5px;
+}
+
+#user-profile .user-information ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0px lightseagreen;
+}
+
+#user-profile .user-information ul li {
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#user-profile .user-information ul li:hover {
+    box-shadow: 0 0 8px 0px lightseagreen;
+    background-color: #00aaffc9;
+    color: white;
+    text-shadow: 1px 1px 10px black;
+}
+
+#user-profile .user-information ul a {
+    display: block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+#user-profile .user-information ul a:hover {
+    background-color: #06BBCC;
+    border-color: #06BBCC;
+    color: white;
+}
+
+#user-profile h2 {
+    margin: 5px auto;
+    text-align: center;
+}
+
+#user-profile .recent-books {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0px lightseagreen;
+}
+
+#user-profile .recent-books thead,
+#user-profile .recent-books tbody,
+#user-profile .recent-books tfoot {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#user-profile .recent-books thead,
+#user-profile .recent-books tfoot {
+    background-color: #0097ff;
+    color: white;
+}
+
+#user-profile .recent-books td {
+    padding: 10px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#user-profile .recent-books tbody td:hover {
+    background-color: #06BBCC;
+    border-color: #06BBCC;
+    color: white;
+    padding-right: 20px;
+}
+
+#user-profile .recent-books tfoot #total-books {
+    text-align: center;
+}
